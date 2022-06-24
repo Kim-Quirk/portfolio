@@ -1,5 +1,47 @@
+:root {
+    --font-body: 'Source Sans Pro', sans-serif;
+    --font-headline: 'Cinzel', serif;
+    --font-emphasis: 'Alegreya Sans SC', sans-serif;
+    /* colors */
+    --primary-color: #463a3a;
+    --secondary-color: #8A817C;
+    --tertiary-color: #E0AFA0;
+    --light-grey: #BCB8B1;
+    --white: #F4F3EE;
+    /* colors */
+    /* --primary-color: #15304e;
+    --secondary-color: #6096BA;
+    --tertiary-color: #A3CEF1;
+    --light-grey: #8B8C89;
+    --white: #E7ECEF; */
+    /* --old-color: rgb(30, 36, 64);
+    --old-white: rgb(177, 177, 181); */
+  
+    /* sizes */
+    --font-base: 18px;
+    --small-font: 0.8em;
+    --large-font: 1.2em;
+  }
+
 body {
-    background-color: rgb(30, 36, 64);
-    color:rgb(177, 177, 181);
+    background-color: var(--white);
+    color: var(--primary-color);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    margin-top: 0;
+}
+
+header ul {
+    margin:0;
+}
+
+#media-links img {
+    max-width: 1.5rem;
+    display: block;
+    margin: 1rem 0;
 }
