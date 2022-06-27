@@ -1,47 +1,165 @@
 :root {
-    --font-body: 'Source Sans Pro', sans-serif;
-    --font-headline: 'Cinzel', serif;
-    --font-emphasis: 'Alegreya Sans SC', sans-serif;
-    /* colors */
-    --primary-color: #463a3a;
+  --font-body: "Source Sans Pro", sans-serif;
+  --font-headline: "Cinzel", serif;
+  --font-emphasis: "Alegreya Sans SC", sans-serif;
+  /* colors */
+  --primary-color: #178ca4;
+  --secondary-color: #072a40;
+  --tertiary-color: #18b7be;
+  --light-grey: #bcb8b1;
+  --white: #f4f3ee;
+  /* colors */
+  /* --primary-color: #463a3a;
     --secondary-color: #8A817C;
     --tertiary-color: #E0AFA0;
     --light-grey: #BCB8B1;
-    --white: #F4F3EE;
-    /* colors */
-    /* --primary-color: #15304e;
+    --white: #F4F3EE; */
+  /* colors */
+  /* --primary-color: #15304e;
     --secondary-color: #6096BA;
     --tertiary-color: #A3CEF1;
     --light-grey: #8B8C89;
     --white: #E7ECEF; */
-    /* --old-color: rgb(30, 36, 64);
+  /* --old-color: rgb(30, 36, 64);
     --old-white: rgb(177, 177, 181); */
-  
-    /* sizes */
-    --font-base: 18px;
-    --small-font: 0.8em;
-    --large-font: 1.2em;
-  }
+
+  /* sizes */
+  --font-base: 18px;
+  --small-font: 0.8em;
+  --large-font: 1.2em;
+}
+
+/* Ultitily classes */
 
 body {
-    background-color: var(--white);
-    color: var(--primary-color);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
+  background-color: var(--white);
+  color: var(--primary-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
 }
 
 header {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    margin-top: 0;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  margin-top: 0;
 }
+
+main {
+  padding: 0.7rem;
+}
+
+.main-content {
+  padding: 0 3rem;
+}
+
+footer {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 0.5rem 3rem;
+}
+
+/* End utility classes */
+
+/* Nav styles */
 
 header ul {
-    margin:0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none;
 }
 
+.nav li {
+  margin: 0;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: var(--white);
+  padding: 0.5rem 3rem;
+  display: block;
+}
+
+.nav li a:hover:not(.active) {
+  background-color: var(--tertiary-color);
+}
+
+.active {
+  background-color: var(--primary-color);
+}
+/* End Nav styles */
+
+/* Intro styles */
+
+#hi {
+  margin-bottom: 0;
+}
+
+#name {
+  margin-top: 0;
+}
+
+/* End intro */
+
+/* About me styles */
+.image img  {
+    max-width: 17rem;
+    width: 100%;
+}
+/* End about me */
+
+/* Media link styles */
 #media-links img {
-    max-width: 1.5rem;
-    display: block;
-    margin: 1rem 0;
+  max-width: 1.5rem;
+  display: block;
+  margin: 1rem 0;
+}
+/* End media links */
+
+@media screen and (min-width: 800px) {
+  /* Utility styles */
+  h1 {
+    font-size: 400%;
+    font-weight: bolder;
+  }
+
+  p {
+    font-size: 120%;
+  }
+
+  main {
+    padding: 0 2rem;
+  }
+
+  .main-content {
+    padding: 0 10rem;
+  }
+  .intro {
+    max-width: 40rem;
+  }
+  /* end utility */
+  /* Nav bar styles */
+  header ul li {
+    display: inline;
+  }
+
+  li {
+    float: right;
+  }
+  /* End nav bar */
+  /* About me styles */
+
+  .about {
+    display: grid;
+    grid-template-columns: 70% 30%;
+  }
+
+  .text {
+    padding-right: 10%;
+  }
+
+  .image {
+    margin: auto 0;
+  }
+  /*  */
 }
